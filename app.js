@@ -88,7 +88,7 @@ const sessionIds = new Map();
 
 // Index route
 app.get('/', function (req, res) {
-	res.send('Hello world, I am a chat bot')
+	res.send('Hello world, I am a IT chat bot')
 })
 
 // for Facebook verification
@@ -361,7 +361,7 @@ function handleDialogFlowResponse(sender, response) {
         handleMessages(messages, sender);
 	} else if (responseText == '' && !isDefined(action)) {
 		//dialogflow could not evaluate input.
-		sendTextMessage(sender, "I'm not sure what you want. Can you be more specific?");
+		sendTextMessage(sender, "I'm not sure what you want. Can you be more specific? From server");
 	} else if (isDefined(responseText)) {
 		sendTextMessage(sender, responseText);
 	}
